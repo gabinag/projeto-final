@@ -1,15 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+body {
+    overflow-x: hidden;
+    margin: 0px;
+    background-color: #FFF0B9;
+}
+
 .nav-wrapper {
     padding: 0px 30px;
+    background: #B8A072;
+}
+
+.link {
+    color: #000;
+    font-weight: bold;
+    font-family: 'Amatic SC', cursive;
+    font-size: 22px;
+}
+
+#muda-tema, footer {
+    background-color: #ffccbc;
 }
 
 .main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 60px;
-    margin-bottom: 80px;
-    min-height: 80vh;
+    padding: 60px 0px;
+    min-height: 85vh;
+    background-color: #FFF0B9;
 }
 
 .main img {
@@ -22,10 +40,19 @@
     margin: 0px;
 }
 
-.main h2 {
-    font-size: 20px;
-    font-family: Verdana;
-    margin-bottom: 40px;
+.main p {
+    font-size: 25px;
+}
+
+h2 {
+    font-family: 'Amatic SC', cursive;
+}
+
+h3 {
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+    padding-bottom: 20px;
+    margin:0px;
 }
 
 .main a {
@@ -34,18 +61,65 @@
     font-family: Verdana;
 }
 
-.quem-somos {
-    padding-bottom: 60px;
+
+#btn-main, #muda-tema {
+    background-color: #4D6126;
 }
 
-.quem-somos .descricao {
-    width: 40%;
+.quem-somos {
+    padding: 60px 0px;
+    background-color: #FEFAE0;
+}
+
+#img-quemsomos {
+    border-radius: 10px;
+}
+
+.servicos {
+    background-color: #FFF0B9;
+    padding: 50px 0px;
+}
+
+.card-title {
+    font-size: 20px;
+}
+
+.gallery {
+    padding-top: 50px;
+    background-color: #FEFAE0;
 }
 
 #contato {
-    padding: 60px;
+    padding: 20px 0px;
+    background-color: #FFF0B9;
 }
 
-#contato h2 {
-    padding-left: 17%;
+#footer {
+    background-color: #B8A072;
+   }
+
+.dark #nav, .dark #footer  {
+    background-color: #453820;
 }
+
+.dark .link, .dark .material-icons, .dark{
+    color: #fff;
+}
+
+.dark #img-dog{
+    filter: invert(100%);
+}
+
+.dark .main, .dark .servicos, .dark, .dark #contato{
+    background: #736347;
+}
+
+.dark .quem-somos, .dark .gallery, .dark .card{
+    background-color: #373B1B; 
+}
+
+
+
+
+
+

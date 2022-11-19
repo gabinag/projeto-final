@@ -15,142 +15,175 @@
 <body>
   <header>
     <nav>
-      <div class="nav-wrapper white">
+     
+      <div id="nav" class="nav-wrapper">
         <a href="index.html" class="brand-logo black-text"><i class="material-icons">pets</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down black-text">
-          <li><a class="black-text" href="index.html">Página Inicial</a></li>
-          <li><a class="black-text" href="#quem-somos">Quem somos</a></li>
-          <li><a class="black-text" href="#servicos">Meus serviços</a></li>
-          <li><a class="black-text" href="#contato">Contato</a></li>
+          <li><a class="link" href="index.html">Página Inicial</a></li>
+          <li><a class="link" href="#quem-somos">Quem somos</a></li>
+          <li><a class="link" href="#servicos">Serviços</a></li>
+          <li><a class="link" href="#contato">Contato</a></li>
+          <a onclick="mudaTema()" class="btn-floating" id="muda-tema" style="border-radius: 100px;"><i class="material-icons">brightness_6</i></a>
         </ul>
       </div>
     </nav>
   </header>
 
-  <section class="main orange lighten-5">
-    <img src="./assets/icone-dog.png" alt="Ícone cachorro">
+  <section class="main">
+    <img id="img-dog" src="./assets/icone-dog.png" alt="Ícone cachorro">
     <h1>Dog Walk</h1>
-    <h2>PASSEADORES DE CÃES</h2>
-    <a class="waves-effect waves-light btn-large z-pepth-4 deep-orange lighten-2">Vamos dar uma volta!</a>
+    <p>Passeadores De Cães</p>
+    <a id="btn-main" class="btn-large z-pepth-4" href="#servicos">Vamos dar uma volta!</a>
   </section>
 
   <section class="quem-somos" id="quem-somos">
     <div class="row">
       <div class="descricao col s4 offset-s2">
-        <h3>Quem somos</h3>
+        <h2>Quem somos</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam aspernatur veritatis itaque ut! Doloremque
-          incidunt laborum modi possimus enim mollitia maxime, explicabo blanditiis consequuntur, minima voluptates fuga,
+          incidunt laborum modi possimus enim mollitia maxime, explicabo blanditiis consequuntur, minima voluptates
+          fuga,
           ipsam cum iste.</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero perferendis autem repellendus explicabo veniam
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero perferendis autem repellendus explicabo
+          veniam
           tenetur. Exercitationem, dignissimos modi, quod nobis dolorum error at, perspiciatis totam deserunt dolore
           accusamus. Neque, dolor!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur ratione, et distinctio, modi explicabo incidunt aperiam atque est natus consectetur numquam esse quisquam nemo quas nihil similique, vitae architecto earum.</p>
       </div>
       <div class="col s4 offset+s2">
-        <img class="materialboxed"  width="100%" src="./assets/quem-sou.png" alt="mulher passeando com um cachorro" >
+        <img id="img-quemsomos" class="materialboxed" width="100%" src="./assets/quem-sou.png" alt="mulher passeando com um cachorro">
       </div>
     </div>
   </section>
 
-  <section class="servicos container" id="servicos">
-    <h3>Serviços</h3>
-    <div class="row">
-      <div class="col s4">
-        <div class="card small">
-          <div class="card-image">
-            <img src="assets/holly.jpg">
-            <span class="card-title black-text" style="font-weight: bolder;">Passeio</span>
-          </div>
-          <div class="card-content">
-            <p>Passeio com hora marcada!</p>
-            <p>30 min</p>
-            <p>R$ 16</p>
-          </div>
-          <div class="card-action">
-            <a class="waves-effect waves-light btn deep-orange lighten-2">Agende agora</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col s4">
-        <div class="card small">
-          <div class="card-image">
-            <img src="assets/naninha.png">
-            <span class="card-title black-text" style="font-weight: bolder;">Naninha</span>
-          </div>
-          <div class="card-content">
-            <p>Dormir fora de casa</p>
-            <p>1h</p>
-            <p>R$ 40</p>
-          </div>
-          <div class="card-action">
-            <a class="waves-effect waves-light btn deep-orange lighten-2">Agende agora</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col s4">
-        <div class="card small">
-          <div class="card-image">
-            <img src="assets/passeio.png">
-            <span class="card-title black-text" style="font-weight: bolder;">Hora do passeio!</span>
-          </div>
-          <div class="card-content">
-            <p>Passeio por uma hora</p>
-            <p>1h</p>
-            <p>R$ 25</p>
-          </div>
-          <div class="card-action">
-            <a class="waves-effect waves-light btn deep-orange lighten-2">Agende agora</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="row" id="contato">
-    <h2>Contato</h2>
-    <form class="col s12">
+  <section class="servicos">
+    <div class="container" id="servicos">
+      <h3>Serviços</h3>
       <div class="row">
-        <div class="input-field col s4 offset-s2">
+        <div class="col s4">
+          <div class="card medium">
+            <div class="card-image">
+              <img src="assets/holly.jpg">
+            </div>
+            <div class="card-content">
+              <p class="card-title">Passeio</p>
+              <p>Passeio com hora marcada!</p>
+              <p>30 min</p>
+              <p>R$ 16</p>
+            </div>
+            <div class="card-action">
+              <a class="waves-effect waves-light btn  light-green darken-4" style="border-radius: 100px;">Agende agora</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s4">
+          <div class="card medium">
+            <div class="card-image">
+              <img src="assets/naninha.png">
+            </div>
+            <div class="card-content">
+              <p class="card-title">Naninha</p>
+              <p>Dormir fora de casa</p>
+              <p>1h</p>
+              <p>R$ 40</p>
+            </div>
+            <div class="card-action">
+              <a class="waves-effect waves-light btn  light-green darken-4" style="border-radius: 100px;">Agende agora</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s4">
+          <div class="card medium">
+            <div class="card-image">
+              <img src="assets/passeio.jpg">
+            </div>
+            <div class="card-content">
+              <p class="card-title">Hora do passeio!</p>
+              <p>Passeio por uma hora</p>
+              <p>1h</p>
+              <p>R$ 25</p>
+            </div>
+            <div class="card-action">
+              <a class="waves-effect waves-light btn  light-green darken-4" style="border-radius: 100px;">Agende agora</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gallery row">
+    <h3>Galeria</h3>
+    <form action="#">
+      <div class="file-field input-field col s6 offset-s3">
+        <div class="btn  light-green darken-4" style="border-radius: 100px;">
+          <span>Arquivo</span>
+          <input type="file" id="file" accept="image/jpeg, image/png, image/jpg">
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text">
+        </div>
+      </div>
+    </form>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s6 offset-s3">
+              <textarea id="textarea1" class="materialize-textarea"></textarea>
+              <label for="textarea1">Textarea</label>
+              <button class="btn col s2 offset-s10  light-green darken-4" style="border-radius: 200px;" type="submit" name="action" onclick="adicionaImagem()">Enviar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+  </div>
+
+  
+
+  <div class="row contact" id="contato">
+    <h3>Contato</h3>
+    <form class="col s12">
+        <div class="input-field col s3 offset-s3">
           <i class="material-icons prefix">account_circle</i>
-          <input placeholder="Nome" id="first_name" type="text" class="validate">
+          <input id="name" type="text" class="validate" required>
           <label for="name">Nome</label>
         </div>
 
-        <div class="input-field col s4 offset+s2">
+        <div class="input-field col s3 offset+s3">
           <i class="material-icons prefix">phone</i>
-          <input id="last_name" type="text" class="validate">
+          <input id="phone" type="tel" class="validate">
           <label for="phone">Telefone</label>
         </div>
-      </div>
 
       <div class="row">
       </div>
       <div class="row">
-        <div class="input-field col s8 offset-s2 offset+s2">
+        <div class="input-field col s6 offset-s3 offset+s3">
           <i class="material-icons prefix">email</i>
-          <input id="email" type="email" class="validate">
+          <input id="email" type="email" class="validate" required>
           <label for="email">Email</label>
         </div>
       </div>
       <div class="row">
         <div class="row">
-          <div class="input-field col s8 offset-s2 offset+s2">
+          <div class="input-field col s6 offset-s3 offset+s3">
             <i class="material-icons prefix">mode_edit</i>
-            <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-            <label for="icon_prefix2">Mande sua Mensagem!</label>
+            <textarea id="textarea" class="materialize-textarea" required></textarea>
+            <label for="textarea">Mande sua Mensagem!</label>
+            <button class="btn col s2 offset-s10 light-green darken-4" style="border-radius: 100px;" type="submit" name="action">Enviar
+              <i class="material-icons right">send</i>
+            </button>
           </div>
         </div>
       </div>
   </div>
   </form>
+</div>
 
-
-  <footer class="page-footer deep-orange lighten-3">
+  <footer id="footer" class="page-footer">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Footer Content</h5>
           <p class="text-lighten-4 white-text">You can use rows and columns here to organize your footer content.</p>
         </div>
 
@@ -165,10 +198,9 @@
         </div>
       </div>
     </div>
-    <div class="footer-copyright deep-orange lighten-3">
+    <div class="footer-copyright">
       <div class="container">
-        © 2022 Copyright
-        <a class="white-text deep-orange lighten-3" href="#!">Mais Links</a>
+        © DogWalk 2022 Copyright
       </div>
     </div>
   </footer>
