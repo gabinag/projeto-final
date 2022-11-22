@@ -89,6 +89,23 @@ h3 {
     background-color: #FEFAE0;
 }
 
+#gallery-desc {
+    text-align: center;
+    font-family: Verdana;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px 30px 80px;
+}
+
+.picture {
+    width: 400px;
+    margin: 20px;
+  }
+
 #contato {
     padding: 20px 0px;
     background-color: #FFF0B9;

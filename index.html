@@ -114,11 +114,12 @@
 
   <div class="gallery row">
     <h3>Galeria</h3>
+    <p id="gallery-desc">Adicione uma foto do seu doguinho à nossa galeria</p>
     <form action="#">
       <div class="file-field input-field col s6 offset-s3">
         <div class="btn  light-green darken-4" style="border-radius: 100px;">
           <span>Arquivo</span>
-          <input type="file" id="file" accept="image/jpeg, image/png, image/jpg">
+          <input type="file" id="file" onclick="addImage()" accept="image/jpeg, image/png, image/jpg">
         </div>
         <div class="file-path-wrapper">
           <input class="file-path validate" type="text">
@@ -136,6 +137,7 @@
           </div>
         </form>
       </div>
+      <div id="container"></div>
   </div>
 
   
