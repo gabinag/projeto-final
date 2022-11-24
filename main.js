@@ -13,32 +13,32 @@ function mudaTema() {
 
 
 //Galeria
-const lista = [];
-function addImage() {
-   const inputFile = document.querySelector("#file");
-   const div = document.getElementById("container");
-  
-  inputFile.addEventListener("change", function (e) {
-  const inputTarget = e.target;
-  let file = inputTarget.files[0];
+function init() {
+  const inputFile = document.querySelector("#file");
 
-  const reader = new FileReader();
+  function closeInput() {
+    inputFile.addEventListener("change", function (e) {
+    const inputTarget = e.target;
+    let file = inputTarget.files[0];
 
-  reader.addEventListener("load", function (e) {
-  const readerTarget = e.target;
-  
-  const img = document.createElement("img");
-
-  img.src = readerTarget.result;
-  img.classList.add("picture");
-  
-  div.appendChild(img);
-  });
+    const reader = new FileReader();
+    reader.addEventListener("load", function (e) {
+    const readerTarget = e.target;
     
-  reader.readAsDataURL(file);
-});
-}
+    const img = document.createElement("img");
+    img.src = readerTarget.result;
+    img.classList.add("picture");
 
+    const div = document.getElementById("container");
+    div.appendChild(img);
+    });
+      
+    reader.readAsDataURL(file);
+    });
+  }
+  closeInput();
+}
+init();
 
 
 
